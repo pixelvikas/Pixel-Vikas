@@ -1,13 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { MdPeople, MdDesignServices } from "react-icons/md";
 import { FaHandshake } from "react-icons/fa";
 import { RiArticleFill } from "react-icons/ri";
+import BlackLogo from "/assets/pvlogoblack.png";
+import "./Header.css";
 
 const Header = () => {
-  const [activeLink, setActiveLink] = useState("#home");
+  const sectionsRef = useRef({});
+  const [activeLink, setActiveLink] = useState("");
   const [scrollHeader, setScrollHeader] = useState(false);
-  const sectionsRef = useRef([]);
 
   // Scroll event listener for active link and header background
   useEffect(() => {
@@ -37,11 +40,21 @@ const Header = () => {
 
   // Navigation items with React Icons
   const navItems = [
-    { id: "home", name: "Home", icon: <FaHome /> },
-    { id: "about", name: "About us", icon: <MdPeople /> },
-    { id: "services", name: "Services", icon: <MdDesignServices /> },
-    { id: "projects", name: "Projects", icon: <FaHandshake /> },
-    { id: "blogs", name: "Blogs", icon: <RiArticleFill /> },
+    { id: "home", link: "/", name: "Home", icon: <FaHome /> },
+    { id: "about-us", link: "/about-us", name: "About Us", icon: <MdPeople /> },
+    {
+      id: "services",
+      link: "/services",
+      name: "Services",
+      icon: <MdDesignServices />,
+    },
+    {
+      id: "projects",
+      link: "/projects",
+      name: "Projects",
+      icon: <FaHandshake />,
+    },
+    { id: "blogs", link: "/blogs", name: "Blogs", icon: <RiArticleFill /> },
   ];
 
   return (
@@ -53,7 +66,7 @@ const Header = () => {
         <nav className="nav container">
           {/* Profile Image */}
           <img
-            src="assets/img/perfil.png"
+            src={BlackLogo}
             alt="Profile"
             className="nav__img"
             aria-label="Profile image"
@@ -68,24 +81,31 @@ const Header = () => {
                   key={item.id}
                   ref={(el) => (sectionsRef.current[item.id] = el)}
                 >
-                  <a
-                    href={`#${item.id}`}
+                  <Link
+                    to={item.link}
                     className={`nav__link ${
                       activeLink === `#${item.id}` ? "active-link" : ""
                     }`}
+                    onClick={() => setActiveLink(`#${item.id}`)}
                   >
-                    <i className="nav__icon">{item.icon}</i>
+                    <i
+                      className={`nav__icon ${
+                        activeLink === `#${item.id}` ? "active-icon" : ""
+                      }`}
+                    >
+                      {item.icon}
+                    </i>
                     <span className="nav__name">{item.name}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Logo */}
-          <a href="#" className="nav__logo" aria-label="Logo">
-            Marlon
-          </a>
+          <Link className="nav__logo">
+            <div>Lets Talk</div>
+          </Link>
         </nav>
       </header>
     </>
