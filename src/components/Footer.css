@@ -59,13 +59,13 @@
 }
 
 .social__icon i:hover {
-  color: #f39422;
+  color: #f39422;  
 }
 
 .footer__links ul {
   list-style: none;
   padding: 0;
-}
+}  
 
 .footer__links ul li {
   margin-bottom: 0.5rem;
