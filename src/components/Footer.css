@@ -90,6 +90,8 @@
   padding: 0.5rem;
   border: 1px solid #ddd;
   border-radius: 4px 0 0 4px;
+  background-color: #f39422;
+  color: #52377b;
   outline: none;
 }
 
@@ -163,7 +165,7 @@
   margin-top: 15px;
   font-weight: bold;
   text-transform: uppercase;
-  color: #5e2996;
+  color: #52377b;
 }
 
 /* Social Icons Styles */
@@ -175,13 +177,13 @@
 
 .social-icons a {
   font-size: 30px;
-  color: #5e2996; /* Primary purple color */
+  color: #52377b; /* Primary purple color */
   text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease; /* Smooth animation */
 }
 
 .social-icons a:hover {
-  color: #3e1c66; /* Darker purple on hover */
+  color: #52377b; /* Darker purple on hover */
   transform: scale(1.2); /* Slight zoom on hover */
 }
 
