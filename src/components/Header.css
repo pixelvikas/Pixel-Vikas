@@ -1,6 +1,7 @@
 /*=============== HEADER ===============*/
 .header {
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
@@ -124,7 +125,7 @@
   }
 
   .nav__list {
-    gap: 2rem;
+    gap: 1.3rem;
   }
 
   .nav__link {
