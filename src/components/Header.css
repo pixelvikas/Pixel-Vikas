@@ -57,7 +57,7 @@
 
 .nav__list {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .nav__item {
@@ -107,6 +107,11 @@
 }
 
 /*=============== MEDIA QUERIES ===============*/
+@media screen and (max-width: 376px) {
+  .nav__list {
+    gap: 5rem;
+  }
+}
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
@@ -125,7 +130,7 @@
   }
 
   .nav__list {
-    gap: 1.3rem;
+    gap: 1.7rem;
   }
 
   .nav__link {

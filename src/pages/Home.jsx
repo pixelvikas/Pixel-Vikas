@@ -109,6 +109,26 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <div className="solutions">
+        <div className="solution-header">
+          <div className="solution-title">
+            <h1 className="highlight-text">*LET US SHOW YOU!</h1>
+            <h1>
+              ELEVATING{" "}
+              <span className="span-white">
+                YOUR PROJECTS <br />
+                WITH{" "}
+              </span>
+              TAILORED SOLUTIONS
+            </h1>
+          </div>
+          <p className="solution-description">
+            We transform innovative ideas into captivating and memorable digital
+            experiences that engage and inspire.
+          </p>
+        </div>
+      </div>
     </>
   );
 };
