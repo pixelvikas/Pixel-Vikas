@@ -57,7 +57,7 @@
 
 .nav__list {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .nav__item {
@@ -125,7 +125,7 @@
   }
 
   .nav__list {
-    gap: 1.3rem;
+    gap: 1.7rem;
   }
 
   .nav__link {

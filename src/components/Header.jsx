@@ -53,7 +53,7 @@ const Header = () => {
   // Navigation items with React Icons
   const navItems = [
     { id: "home", link: "/", name: "Home", icon: <FaHome /> },
-    { id: "about-us", link: "/about-us", name: "About Us", icon: <MdPeople /> },
+    { id: "about-us", link: "/about-us", name: "About", icon: <MdPeople /> },
     {
       id: "services",
       link: "/services",
