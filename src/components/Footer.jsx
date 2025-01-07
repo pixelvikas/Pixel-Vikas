@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import BlackLogo from "/assets/pvlogoblack.png";
+import PvLogo from "/assets/pvlogo.png";
 import { FaInstagram, FaYoutube, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { TbBrandX } from "react-icons/tb"; // For the 'X' (Twitter alternative)
 
@@ -39,11 +39,7 @@ const Footer = () => {
       <div className="footer__middle">
         {/* About Section */}
         <div className="footer__about">
-          <img
-            src={BlackLogo}
-            alt="Pixel Vikas Logo"
-            className="footer__logo"
-          />
+          <img src={PvLogo} alt="Pixel Vikas Logo" className="footer__logo" />
           <p>
             "Stay connected! Follow us on social media for the latest tips,
             trends, and insights."

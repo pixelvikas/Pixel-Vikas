@@ -242,3 +242,84 @@
     font-size: 0.9rem;
   }
 }
+/*=============== CLIENTS SECTION ===============*/
+.clients {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  background: #f9f9f9;
+  overflow: hidden; /* Ensures the sliding is contained */
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  padding: 35px 0;
+  background: #ffa829;
+}
+
+.logos-slide {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  animation: scroll 35s linear infinite;
+  width: max-content; /* Ensures the content spans naturally */
+}
+
+.logos-slide:hover {
+  animation-play-state: paused;
+}
+
+.logo-item {
+  height: 100px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0) invert(0);
+}
+
+.logo-item:hover {
+  filter: none;
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .logo-item {
+    height: 80px;
+    margin: 0 10px;
+  }
+
+  .clients .heading1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-item {
+    height: 60px;
+    margin: 0 5px;
+  }
+
+  .clients .heading1 {
+    font-size: 1.5rem;
+  }
+}
