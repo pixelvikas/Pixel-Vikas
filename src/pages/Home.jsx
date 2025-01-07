@@ -2,6 +2,9 @@ import React from "react";
 import "./Home.css";
 import graphics from "/assets/graphics.png";
 import coding from "/assets/coding.png";
+import video1 from "/assets/video1.mp4";
+import video2 from "/assets/video2.mp4";
+
 import speaker from "/assets/speaker.png";
 import like from "/assets/like.png";
 import { MdArrowOutward } from "react-icons/md";
@@ -13,7 +16,15 @@ const Home = () => {
       <div className="hero-section">
         <div className="hero-line">
           <h1 className="hero-text">YOU’RE</h1>
-          <img className="hero-graphic" src={graphics} alt="Graphics" />
+          <video
+            className="hero-graphic"
+            autoPlay
+            muted
+            loop
+            playsInline
+            src={video1}
+            aria-label="Graphics"
+          />
         </div>
         <div className="hero-line">
           <img className="hero-icon" src={speaker} alt="Speaker Icon" />
@@ -21,7 +32,15 @@ const Home = () => {
         </div>
         <div className="hero-line">
           <h2 className="hero-text">MATTERS</h2>
-          <img className="hero-coding" src={coding} alt="Coding" />
+          <video
+            className="hero-coding"
+            autoPlay
+            muted
+            loop
+            playsInline
+            src={video2}
+            aria-label="Coding"
+          />
         </div>
       </div>
 

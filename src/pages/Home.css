@@ -20,7 +20,7 @@
 
 .hero-line {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
@@ -33,10 +33,37 @@
 
 .hero-graphic {
   width: 100%;
-  max-width: 800px;
-  height: auto;
-  border-radius: 10px;
+  max-width: clamp(300px, 80%, 831px); /* Dynamically adjusts max-width */
+  height: auto; /* Maintains aspect ratio automatically */
+  border-radius: 100px; /* Smooth rounded corners */
+  aspect-ratio: 36 / 5; /* Ensures consistent aspect ratio */
+  object-fit: cover; /* Ensures content fills the container */
+  overflow: hidden; /* Hides any overflow */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Adds shadow for better aesthetics */
+  transition: transform 0.3s ease; /* Smooth animation on hover or interaction */
 }
+
+@media screen and (max-width: 1024px) {
+  .hero-graphic {
+    max-width: 700px; /* Adjusts max-width for smaller screens */
+    border-radius: 40px; /* Slightly smaller border radius */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-graphic {
+    max-width: 500px; /* Further reduces size for tablets */
+    border-radius: 30px; /* Adjusts the radius for smaller devices */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-graphic {
+    max-width: 300px; /* Adapts for small mobile screens */
+    border-radius: 20px; /* Smaller border radius for compact displays */
+  }
+}
+
 .hero-icon {
   width: 250px;
   height: auto;
@@ -44,11 +71,46 @@
   z-index: 10;
   margin: -30px 0; /* Adjust as needed for overlapping effect */
 }
+
 .hero-coding {
   width: 100%;
-  max-width: 650px;
-  height: auto;
-  border-radius: 10px;
+  max-width: clamp(
+    300px,
+    80%,
+    731px
+  ); /* Dynamically adjusts max-width based on screen size */
+  height: auto; /* Maintains aspect ratio automatically */
+  border-radius: clamp(
+    50px,
+    10vw,
+    100px
+  ); /* Dynamically adjusts border-radius */
+  aspect-ratio: 28 / 5; /* Ensures consistent aspect ratio */
+  object-fit: cover; /* Ensures the content fills the container properly */
+  overflow: hidden; /* Hides overflow content */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Adds shadow for visual enhancement */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation for hover effects */
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-coding {
+    max-width: 600px; /* Adjusts max-width for smaller screens */
+    border-radius: 80px; /* Slightly reduced border radius */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-coding {
+    max-width: 500px; /* Further reduces size for tablets */
+    border-radius: 60px; /* Adjusts border radius for smaller devices */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-coding {
+    max-width: 300px; /* Adapts for small mobile screens */
+    border-radius: 40px; /* Smaller border radius for compact displays */
+  }
 }
 
 /* CTA Section */
@@ -129,13 +191,6 @@
 @media (max-width: 768px) {
   .hero-text {
     font-size: 2.5rem;
-  }
-
-  .hero-graphic,
-  .hero-coding {
-    display: none;
-    width: 100%;
-    max-width: 90%;
   }
 
   .hero-icon {
