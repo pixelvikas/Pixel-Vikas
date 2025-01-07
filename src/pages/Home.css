@@ -339,7 +339,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 1200px;
+  width: 100%;
   gap: 2rem;
   justify-content: space-between;
   align-items: center;
@@ -370,12 +370,12 @@
 }
 
 .solution-description {
-  flex: 1 1 40%; /* Allow better use of space */
+  flex: 1 1 9%;
   font-family: "Alata", sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.75;
+  font-size: 1.5rem;
+  line-height: 1.5;
   margin-top: 1rem;
-  color: #4d194d; /* Deep purple text */
+  color: #52377b;
 }
 
 /* Responsive styles for tablets and smaller devices */
@@ -426,5 +426,149 @@
 
   .solutions {
     padding: 1rem;
+  }
+}
+
+/* Container for the solution bar */
+.solution-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+
+  gap: 1.5rem;
+}
+
+/* Main bar styling */
+.bar {
+  background-color: #52377b; /* Deep purple background */
+  color: #ffa62b; /* Bright orange text */
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  width: 100%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+.bar:hover {
+  background-color: #ffa62b; /* Change background to bright orange on hover */
+  color: #52377b; /* Change text color to deep purple on hover */
+}
+
+.bar:hover .bar-icon {
+  filter: brightness(0) saturate(100%) invert(22%) sepia(48%) saturate(1229%)
+    hue-rotate(230deg) brightness(89%) contrast(87%);
+}
+.bar:hover .arrow-icon {
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease-in-out; /* Ensures smooth transition for the rotation */
+}
+
+.bar:hover .solution-arrow {
+  background-color: #52377b; /* Change arrow background to deep purple on hover */
+  color: #ffa62b; /* Change arrow color to bright orange on hover */
+}
+
+/* Icon styling */
+.bar-icon {
+  height: 60px;
+  width: 40px;
+  margin-right: 1rem;
+}
+
+/* Text inside the bar */
+.bar-text {
+  font-family: "Anton", serif;
+  font-size: 2.5rem;
+  flex: 1; /* Take up remaining space */
+  text-align: left;
+  margin-left: 1rem;
+}
+
+/* Arrow styling */
+.solution-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffa62b; /* Bright orange circle */
+  color: #6c4a9b; /* Deep purple arrow */
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for arrow background and text color */
+}
+
+.arrow-icon {
+  font-size: 1.5rem; /* Adjust size of the arrow */
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 768px) {
+  .bar {
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  .bar-icon {
+    height: 40px;
+  }
+
+  .bar-text {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .bar-icon {
+    margin: 0;
+  }
+
+  .solution-arrow {
+    height: 40px;
+    width: 40px;
+  }
+
+  .arrow-icon {
+    font-size: 1.25rem;
+  }
+
+  .solution-bar {
+    padding: 0.5rem;
+  }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 480px) {
+  .bar {
+    padding: 1rem;
+  }
+  .bar-icon {
+    height: 40px;
+  }
+
+  .bar-text {
+    font-size: 0.9rem;
+  }
+
+  .solution-arrow {
+    height: 35px;
+    width: 35px;
+  }
+
+  .arrow-icon {
+    font-size: 1rem;
+  }
+  .solution-bar {
+    padding: 0.5rem;
   }
 }

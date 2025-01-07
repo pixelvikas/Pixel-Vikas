@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import graphics from "/assets/graphics.png";
 import coding from "/assets/coding.png";
 import video1 from "/assets/video1.mp4";
 import video2 from "/assets/video2.mp4";
-
+import PV from "/assets/PV.svg";
 import client1 from "/assets/client1.png";
 // import client2 from "/assets/client2.png";
 import client3 from "/assets/client3.png";
@@ -21,7 +21,7 @@ import client13 from "/assets/client13.png";
 
 import speaker from "/assets/speaker.png";
 import like from "/assets/like.png";
-import { MdArrowOutward } from "react-icons/md";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const Home = () => {
   const clientImages = [
@@ -39,6 +39,16 @@ const Home = () => {
     client12,
     client13,
   ];
+
+  const [data, setData] = useState([]);
+
+  // Fetch data from the JSON file
+  useEffect(() => {
+    fetch("/data.json")
+      .then((response) => response.json())
+      .then((json) => setData(json))
+      .catch((error) => console.error("Error loading data:", error));
+  }, []);
   return (
     <>
       <div className="home-container">
@@ -80,7 +90,7 @@ const Home = () => {
             <button className="cta-button">
               Get Started
               <div className="arrow">
-                <MdArrowOutward />
+                <FiArrowUpRight />
               </div>
             </button>
             <img className="cta-icon" src={like} alt="Like Icon" />
@@ -127,6 +137,18 @@ const Home = () => {
             We transform innovative ideas into captivating and memorable digital
             experiences that engage and inspire.
           </p>
+        </div>
+
+        <div className="solution-bar">
+          {data.map((item) => (
+            <div className="bar" key={item.id}>
+              <img src={PV} alt="Icon" className="bar-icon" />
+              <p className="bar-text">{item.text}</p>
+              <div className="solution-arrow">
+                <FiArrowUpRight className="arrow-icon" />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>
