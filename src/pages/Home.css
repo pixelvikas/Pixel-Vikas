@@ -653,10 +653,16 @@
 
 .arrow-button:hover {
   color: #6a4ca8; /* Slight hover effect */
+  transition: transform 0.3s ease; /* Smooth animation */
 }
 
 .arrow-button svg {
-  font-size: 2rem;
+  transition: transform 0.3s ease; /* Smooth animation */
+  font-size: 2rem; /* Move icon slightly on hover */
+}
+
+.arrow-button:hover svg {
+  transform: translateX(5px); /* Slide to the right */
 }
 
 /* Responsive Styles */
@@ -894,5 +900,188 @@
 
   .projects {
     padding: 1rem;
+  }
+} /* Container for the flexbox layout */
+/* Container for the flexbox layout */
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/* Individual project item */
+.project-item {
+  position: relative; /* For absolute positioning of project-data */
+  width: calc(50% - 1rem); /* Two items per row */
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image styling */
+.project-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images are properly cropped */
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.project-item:hover img {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.project-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Project data container */
+.project-data {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Darker overlay for better text contrast */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show overlay and text on hover */
+.project-item:hover .project-data {
+  opacity: 1;
+}
+
+/* Project name styling */
+.project-name {
+  font-family: "Anton", serif;
+  text-align: left;
+  color: #fff;
+  font-size: 2.5rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Subtle text shadow for readability */
+}
+
+/* Project details styling */
+.project-details {
+  font-family: "Alata", sans-serif;
+  text-align: left;
+  font-size: 1.5rem;
+  color: #ffa829;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Consistent text shadow */
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  .project-item {
+    width: calc(50% - 0.5rem); /* Adjust for two items per row */
+  }
+  .project-name {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+  .project-details {
+    font-size: 1.2rem;
+  }
+  .project-list {
+    gap: 1rem;
+    padding: 0;
+  }
+}
+
+/* Responsive design for small screens */
+@media (max-width: 480px) {
+  .project-item {
+    width: 100%; /* Full-width for single column layout */
+    height: auto;
+  }
+  .project-name {
+    font-size: 1.8rem; /* Further adjust font size */
+  }
+  .project-details {
+    font-size: 1rem;
+  }
+  .project-list {
+    gap: 1rem;
+    padding: 0;
+  }
+}
+
+.project-button {
+  font-family: "Alata", sans-serif; /* Consistent, elegant font */
+  font-size: 1.2rem; /* Button text size */
+  font-weight: 400; /* Standard font weight */
+  margin-top: 1rem; /* Uniform spacing above the button */
+  width: 30%; /* Default button width */
+  padding: 0.1rem 1rem; /* Balanced padding for better look */
+  background-color: #ffa829; /* Orange background */
+  border: 1.5px solid #52377b; /* Purple border */
+  border-radius: 2rem; /* Smooth, rounded edges */
+  color: #52377b; /* Purple text color */
+
+  display: flex; /* Flex container for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 0.5rem; /* Space between text and any icons */
+  text-decoration: none; /* No underline */
+  transition: all 0.3s ease; /* Smooth hover animations */
+
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+}
+
+/* Hover effect */
+.project-button:hover {
+  background-color: #52377b; /* Lighter orange background on hover */
+  border-color: #ffa829; /* Slightly darker purple border */
+  color: #ffa829; /* Adjust text color for better contrast */
+  transform: scale(1.05); /* Slightly larger on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* SVG (icon) styling */
+.project-button svg {
+  font-size: 1.8rem; /* Icon size */
+  margin-top: 11px; /* Slight vertical alignment adjustment */
+  transition: transform 0.3s ease; /* Smooth animation */
+}
+
+/* Move icon slightly on hover */
+.project-button:hover svg {
+  transform: translateX(5px); /* Slide to the right */
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
+  .project-button {
+    width: 50%; /* Wider button for smaller screens */
+    font-size: 1.4rem; /* Slightly smaller text size */
+  }
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 480px) {
+  .project-button {
+    width: 80%; /* Full width for small screens */
+    font-size: 1.2rem; /* Text size adjustment */
+    padding: 0.6rem 1rem; /* Adjusted padding for compact size */
+  }
+
+  .project-button svg {
+    font-size: 1.6rem; /* Smaller icon size */
   }
 }

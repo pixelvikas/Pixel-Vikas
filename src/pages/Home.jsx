@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
-import graphics from "/assets/graphics.png";
-import coding from "/assets/coding.png";
 import video1 from "/assets/video1.mp4";
 import video2 from "/assets/video2.mp4";
 import PV from "/assets/PV.svg";
 import client1 from "/assets/client1.png";
-// import client2 from "/assets/client2.png";
 import client3 from "/assets/client3.png";
 import client4 from "/assets/client4.png";
 import client5 from "/assets/client5.png";
 import client6 from "/assets/client6.png";
 import client7 from "/assets/client7.png";
-// import client8 from "/assets/client8.png";
 import client9 from "/assets/client9.png";
 import client10 from "/assets/client10.png";
 import client11 from "/assets/client11.png";
@@ -25,9 +21,13 @@ import like from "/assets/like.png";
 import service1 from "/assets/service1.png";
 import service2 from "/assets/service2.png";
 
+import project1 from "/assets/project1.png";
+import project2 from "/assets/project2.png";
+import project3 from "/assets/project3.png";
+import project4 from "/assets/project4.png";
+
 import { FiArrowUpRight } from "react-icons/fi";
 import { HiArrowLongRight } from "react-icons/hi2";
-import { FaInstagram } from "react-icons/fa";
 
 const Home = () => {
   const clientImages = [
@@ -209,6 +209,44 @@ const Home = () => {
             creativity, and client satisfaction.
           </p>
         </div>
+
+        <div className="project-list">
+          <div className="project-item">
+            <img src={project1} alt="Project 1" />
+            <div className="project-data">
+              <h1 className="project-name">Rajkosh</h1>
+              <h1 className="project-details">Website | Domain | Server</h1>
+            </div>
+          </div>
+          <div className="project-item">
+            <img src={project2} alt="Project 2" />
+            <div className="project-data">
+              <h1 className="project-name">SKYLARK</h1>
+              <h1 className="project-details">Website | Domain | Server</h1>
+            </div>
+          </div>
+          <div className="project-item">
+            <img src={project3} alt="Project 3" />
+            <div className="project-data">
+              <h1 className="project-name">Iconic Students Academy</h1>
+              <h1 className="project-details">Website | Domain | Server</h1>
+            </div>
+          </div>
+          <div className="project-item">
+            <img src={project4} alt="Project 4" />
+            <div className="project-data">
+              <h1 className="project-name">Real Homes</h1>
+              <h1 className="project-details">Website | Domain | Server</h1>
+            </div>
+          </div>
+        </div>
+
+        <button class="project-button">
+          <span>View More</span>
+          <div class="project-arrow">
+            <HiArrowLongRight />
+          </div>
+        </button>
       </div>
     </>
   );
