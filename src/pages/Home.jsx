@@ -22,6 +22,7 @@ import client13 from "/assets/client13.png";
 import speaker from "/assets/speaker.png";
 import like from "/assets/like.png";
 import { FiArrowUpRight } from "react-icons/fi";
+import { HiArrowLongRight } from "react-icons/hi2";
 
 const Home = () => {
   const clientImages = [
@@ -149,6 +150,26 @@ const Home = () => {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="services">
+        <div className="services-header">
+          <p className="services-description">
+            We Provide Efficient, Digital & IT Solution
+            <button className="arrow-button">
+              See all Services <HiArrowLongRight />
+            </button>
+          </p>
+          <div className="services-title">
+            <h1 className="highlight-text">*YOU KNOW WHAT?!</h1>
+            <h1>
+              WE BUILD <span className="span-yellow">LASTING IMPACT</span> WITH{" "}
+              <span className="span-yellow">DESIGN</span>,{" "}
+              <span className="span-yellow">DEVELOPMENT</span>, AND DIGITAL{" "}
+              <span className="span-yellow">SOLUTIONS </span>
+            </h1>
+          </div>
         </div>
       </div>
     </>
