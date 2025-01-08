@@ -59,12 +59,12 @@
 }
 
 .social__icon i:hover {
-  color: #f39422;  
-}    
+  color: #f39422;
+}
 .footer__links ul {
   list-style: none;
   padding: 0;
-}  
+}
 
 .footer__links ul li {
   margin-bottom: 0.5rem;
@@ -81,6 +81,7 @@
 
 .footer__subscribe .footer__form {
   display: flex;
+  gap: 0.2rem;
   margin-top: 1rem;
 }
 
@@ -198,5 +199,105 @@
 
   .social-icons a {
     font-size: 26px; /* Adjust icon size for smaller screens */
+  }
+}
+
+.footer-form {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.footer__input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  color: #52377b;
+  background-color: #ffa829;
+  border: 2px solid #52377b;
+  border-radius: 0.5rem;
+  outline: none;
+  font-family: "Arial", sans-serif;
+  transition: box-shadow 0.3s ease;
+  max-width: 450px; /* Limits input width */
+  min-width: 200px; /* Ensures the input doesn't get too small */
+}
+
+.footer__input::placeholder {
+  color: #52377b;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.footer__input:focus {
+  box-shadow: 0 0 8px rgba(82, 55, 123, 0.5);
+}
+
+.footer-submit {
+  background-color: #ffa829;
+  color: #52377b;
+  border: none;
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-submit-button {
+  padding: 2px;
+  border-radius: 0.5rem;
+  background-color: #52377b;
+}
+
+.footer-submit svg {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-submit:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(82, 55, 123, 0.6);
+}
+
+.footer-arrow-icon {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer__input {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+    max-width: 100%; /* Input stretches fully within its container */
+  }
+
+  .footer-submit {
+    width: 30px;
+    height: 30px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__input {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
+    width: 100%; /* Full width input on smaller screens */
+  }
+
+  .footer-submit {
+    width: 28px;
+    height: 28px;
+    font-size: 1.2rem;
   }
 }

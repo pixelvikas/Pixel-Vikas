@@ -15,6 +15,14 @@ import client11 from "/assets/client11.png";
 import client12 from "/assets/client12.png";
 import client13 from "/assets/client13.png";
 
+import review1 from "/assets/review1.png";
+import review2 from "/assets/review2.png";
+import review3 from "/assets/review3.png";
+
+import blog1 from "/assets/Blog1.png";
+import blog2 from "/assets/Blog2.png";
+import blog3 from "/assets/Blog3.png";
+
 import speaker from "/assets/speaker.png";
 import like from "/assets/like.png";
 
@@ -44,6 +52,22 @@ const Home = () => {
     client11,
     client12,
     client13,
+  ];
+
+  const reviews = [
+    review1,
+    review3,
+    review2,
+    review1,
+    review3,
+    review2,
+    review1,
+    review3,
+    review2,
+    review1,
+    review3,
+    review2,
+    review1,
   ];
 
   const [data, setData] = useState([]);
@@ -299,6 +323,85 @@ const Home = () => {
             <span className="span-white">!"</span>
           </h1>
         </div>
+      </div>
+
+      <div className="review">
+        <div className="review-header">
+          <div className="review-title">
+            <h1 className="highlight-text">*SPOILER: THEY LOVE US!</h1>
+            <h1>
+              HERE'S WHAT{" "}
+              <span className="span-yellow">
+                PEOPLE <br /> SAY{" "}
+              </span>
+              ABOUT OUR <span className="span-yellow">WORK</span>
+            </h1>
+          </div>
+        </div>
+
+        <div className="review-card" id="clients">
+          <div className="review-slider">
+            <div className="review-logos">
+              <div className="review-logos-slide">
+                {reviews.concat(reviews).map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    className="review-item"
+                    alt={`Client ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="services">
+        <div className="services-header">
+          <p className="services-description">
+            "Our Blog: Fresh Insights and Valuable Content, Delivered Every
+            Week"
+          </p>
+          <div className="services-title">
+            <h1 className="highlight-text">*WE HAVE A HOBBY!</h1>
+            <h1>
+              STAY <span className="span-yellow">INFORMED</span> WITH <br /> OUR{" "}
+              <span className="span-yellow">LATEST BLOGS</span>
+            </h1>
+          </div>
+        </div>
+
+        <div className="blogs">
+          {[blog1, blog2, blog3, blog1].map((blog, index) => (
+            <div key={index} className="blog-card">
+              <img
+                src={blog}
+                alt={`Blog ${index + 1}`}
+                className="blog-image"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="newsletter">
+        <h1 className="newsletter-title">SUBSCRIBE OUR NEWSLETTER</h1>
+        <p className="newsletter-subtitle">
+          Join Our Newsletter: Stay Updated, Exclusive Content, Sign Up
+        </p>
+        <div className="newsletter-form">
+          <input
+            type="email"
+            placeholder="Enter your Email Address"
+            className="newsletter-input"
+          />
+          <button className="newsletter-button">SUBSCRIBE</button>
+        </div>
+        <p className="newsletter-privacy">
+          We care about your data in our{" "}
+          <a href="/privacy-policy">privacy policy</a>.
+        </p>
       </div>
     </>
   );

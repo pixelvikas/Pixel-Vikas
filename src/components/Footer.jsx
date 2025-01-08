@@ -3,6 +3,7 @@ import "./Footer.css";
 import PvLogo from "/assets/pvlogo.png";
 import { FaInstagram, FaYoutube, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { TbBrandX } from "react-icons/tb"; // For the 'X' (Twitter alternative)
+import { FiArrowUpRight } from "react-icons/fi";
 
 const Footer = () => {
   return (
@@ -120,15 +121,18 @@ const Footer = () => {
             Don’t miss the latest news. Subscribe to our feeds by entering your
             email below.
           </p>
-          <div className="footer__form">
+          <div className="footer-form">
             <input
               type="email"
               placeholder="Enter your Email Address"
               className="footer__input"
-              aria-label="Email Address"
             />
-            <button className="footer__button" aria-label="Subscribe">
-              <i className="fas fa-arrow-right"></i>
+            <button className="footer-submit-button">
+              <div className="footer-submit">
+                <span className="footer-arrow-icon">
+                  <FiArrowUpRight />
+                </span>
+              </div>
             </button>
           </div>
         </div>
