@@ -191,6 +191,25 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <div className="projects">
+        <div className="projects-header">
+          <div className="projects-title">
+            <h1 className="highlight-text">
+              *CURIOUS ABOUT WHAT WE’VE CREATED!
+            </h1>
+            <h1>
+              EXPLORE <span className="span-yellow">OUR </span>
+              MOST <br />
+              RECENT <span className="span-yellow">PROJECTS</span>
+            </h1>
+          </div>
+          <p className="projects-description">
+            Our portfolio highlights successful projects driven by excellence,
+            creativity, and client satisfaction.
+          </p>
+        </div>
+      </div>
     </>
   );
 };
