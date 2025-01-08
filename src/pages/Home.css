@@ -1085,3 +1085,142 @@
     font-size: 1.6rem; /* Smaller icon size */
   }
 }
+
+/* Contact Section */
+.contact-section {
+  background-color: #52377b;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.contact-header {
+  color: #ff9900;
+  text-align: left;
+  font-family: "Days One", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  color: #fff;
+  text-align: left;
+  font-family: "Alata", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  font-family: "Alata", sans-serif;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #52377b;
+  background-color: #ffa829;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  background-color: #ff9900;
+  color: #fff;
+}
+
+.submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Alata", sans-serif;
+  background-color: #ffa829;
+  color: #52377b;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.3rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #ffa829;
+}
+
+.submit-btn:hover {
+  background-color: #52377b;
+  color: #ffa829;
+  border-color: #ffa829;
+}
+
+.contact-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #52377b;
+  border-radius: 50%;
+  color: #ffa829;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.submit-btn:hover .contact-arrow {
+  transform: rotate(45deg);
+  background-color: #ffa829;
+  color: #52377b;
+}
+
+/* .contact-tagline {
+  font-family: "Days One", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  max-width: 600px;
+  line-height: 1.4;
+} */
+.contact-tagline {
+  font-family: "Days One", sans-serif;
+  color: #ffa829;
+  font-size: 2rem;
+  text-align: right;
+  width: 100%;
+  max-width: 600px;
+  line-height: 5rem;
+  padding: 10px 20px; /* Added padding for better spacing */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-tagline {
+    font-size: 1.6rem; /* Reduced font size for tablets */
+    text-align: center; /* Center-align for smaller screens */
+    line-height: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-tagline {
+    font-size: 1.3rem; /* Further reduce font size for mobile devices */
+    line-height: 2.5rem;
+    text-align: center;
+  }
+}

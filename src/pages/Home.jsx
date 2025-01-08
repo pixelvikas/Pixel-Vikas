@@ -241,12 +241,64 @@ const Home = () => {
           </div>
         </div>
 
-        <button class="project-button">
+        <button className="project-button">
           <span>View More</span>
-          <div class="project-arrow">
+          <div className="project-arrow">
             <HiArrowLongRight />
           </div>
         </button>
+      </div>
+
+      <div className="contact-section">
+        <div className="contact-form">
+          <h1 className="contact-header">Let's Talk</h1>
+          <h2 className="contact-subtitle">Consultation is free</h2>
+
+          <form action="#" method="post" className="form">
+            <input
+              type="text"
+              name="full-name"
+              placeholder="Full Name / Company Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+            <input type="tel" name="phone" placeholder="Phone No." required />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit" className="submit-btn">
+              Book a Free Appointment
+              <span className="contact-arrow">
+                <FiArrowUpRight />
+              </span>
+            </button>
+          </form>
+        </div>
+
+        <div className="contact-tagline">
+          <h1>
+            <span className="span-white">"</span>
+            ELEVATE{" "}
+            <span className="span-white">
+              {" "}
+              <br />
+              YOUR{" "}
+            </span>
+            DIGITAL <br />
+            PRESENCE <br />
+            <span className="span-white">TO THE </span>
+            <br />
+            NEXT LEVEL
+            <span className="span-white">!"</span>
+          </h1>
+        </div>
       </div>
     </>
   );
