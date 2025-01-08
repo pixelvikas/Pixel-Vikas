@@ -726,3 +726,61 @@
     padding: 1rem;
   }
 }
+/* Container for all folders */
+.services-folder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 1rem;
+  align-content: center;
+}
+
+/* Individual folder style */
+.folder {
+  width: 40%;
+  height: 40%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+
+/* Folder image style */
+.folder-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hover effect */
+.folder:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  .folder {
+    width: 40%;
+    height: 50%;
+  }
+  .services-folder {
+    gap: 4rem; /* Reduced gap for a cleaner look */
+  }
+}
+
+/* Responsive design for small screens */
+@media (max-width: 480px) {
+  .folder {
+    width: 100%;
+    height: auto;
+  }
+  .services-folder {
+    gap: 2rem; /* Reduced gap for a cleaner look */
+  }
+}

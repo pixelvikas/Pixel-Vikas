@@ -21,8 +21,13 @@ import client13 from "/assets/client13.png";
 
 import speaker from "/assets/speaker.png";
 import like from "/assets/like.png";
+
+import service1 from "/assets/service1.png";
+import service2 from "/assets/service2.png";
+
 import { FiArrowUpRight } from "react-icons/fi";
 import { HiArrowLongRight } from "react-icons/hi2";
+import { FaInstagram } from "react-icons/fa";
 
 const Home = () => {
   const clientImages = [
@@ -169,6 +174,20 @@ const Home = () => {
               <span className="span-yellow">DEVELOPMENT</span>, AND DIGITAL{" "}
               <span className="span-yellow">SOLUTIONS </span>
             </h1>
+          </div>
+        </div>
+        <div className="services-folder">
+          <div className="folder">
+            <img src={service1} alt="Service 1" className="folder-image" />
+          </div>
+          <div className="folder">
+            <img src={service2} alt="Service 2" className="folder-image" />
+          </div>
+          <div className="folder">
+            <img src={service2} alt="Service 2" className="folder-image" />
+          </div>
+          <div className="folder">
+            <img src={service1} alt="Service 1" className="folder-image" />
           </div>
         </div>
       </div>
