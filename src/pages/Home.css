@@ -1078,7 +1078,6 @@
   .project-button {
     width: 80%; /* Full width for small screens */
     font-size: 1.2rem; /* Text size adjustment */
-    padding: 0.6rem 1rem; /* Adjusted padding for compact size */
   }
 
   .project-button svg {

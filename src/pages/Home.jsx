@@ -383,6 +383,12 @@ const Home = () => {
             </div>
           ))}
         </div>
+        <button className="project-button">
+          <span>View More</span>
+          <div className="project-arrow">
+            <HiArrowLongRight />
+          </div>
+        </button>
       </div>
 
       <div className="newsletter">

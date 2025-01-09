@@ -254,6 +254,7 @@
 .footer-submit-button {
   padding: 2px;
   border-radius: 0.5rem;
+  border: solid 1px #52377b;
   background-color: #52377b;
 }
 
