@@ -72,6 +72,24 @@ const Aboutus = () => {
           culpa qui officia deserunt mollit anim id est laborum.
         </div>
       </div>
+
+      <div className="aboutus-solution">
+        <div className="aboutus-solution-header">
+          <p className="aboutus-solution-description">
+            We Provide Efficient,
+            <br /> Digital & IT Solution{" "}
+          </p>
+          <div className="aboutus-solution-title">
+            <h1 className="highlight-text">*YOU KNOW WHAT?!</h1>
+            <h1>
+              WE BUILD <span className="span-white">LASTING IMPACT</span> WITH{" "}
+              <span className="span-white">DESIGN</span>,{" "}
+              <span className="span-white">DEVELOPMENT</span>, AND DIGITAL{" "}
+              <span className="span-white">SOLUTIONS </span>
+            </h1>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

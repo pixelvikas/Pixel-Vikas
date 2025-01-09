@@ -98,3 +98,115 @@
     text-align: center;
   }
 }
+
+.aboutus-solution {
+  background-color: #ffa829; /* Bright orange background */
+  color: #4d194d; /* Deep purple text */
+  padding: 2rem;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutus-solution-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+}
+
+.aboutus-solution-title {
+  flex: 1 1 30%;
+}
+
+.aboutus-solution-title h1 {
+  font-family: "Anton", serif;
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  line-height: 1.2;
+}
+
+.aboutus-solution-title .highlight-text {
+  font-family: "Contrail One", serif;
+  font-size: 1.75rem;
+  color: #ff0000; /* Bright red text for emphasis */
+  margin-bottom: 0.5rem;
+}
+
+.span-yellow {
+  color: #ffa829; /* White text */
+  letter-spacing: 0.1rem;
+}
+
+.aboutus-solution-description {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 9%;
+  font-family: "Alata", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+  text-align: left;
+  color: #52377b;
+  align-items: flex-start;
+}
+
+/* Responsive styles for tablets and smaller devices */
+@media (max-width: 768px) {
+  .aboutus-solution-header {
+    flex-direction: column;
+    text-align: center; /* Center-align content on smaller screens */
+    gap: 1.5rem;
+  }
+
+  .aboutus-solution-title h1 {
+    font-size: 2rem;
+  }
+
+  .aboutus-solution-title .highlight-text {
+    font-size: 1.5rem;
+  }
+
+  .aboutus-solution-description {
+    font-size: 1rem;
+
+    text-align: center;
+  }
+
+  .aboutus-solution {
+    padding: 1.5rem;
+  }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 480px) {
+  .aboutus-solution-header {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .aboutus-solution-title h1 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .aboutus-solution-title .highlight-text {
+    font-size: 1.25rem;
+  }
+
+  .aboutus-solution-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    text-align: center;
+  }
+
+  .aboutus-solution {
+    padding: 1rem;
+  }
+}
