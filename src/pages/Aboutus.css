@@ -1,0 +1,100 @@
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Center-align text for a better aesthetic */
+  padding: 2rem;
+  background-color: #ffa829;
+  min-height: 50vh;
+}
+
+/* Hero Title */
+.hero-title {
+  font-family: "Days One", sans-serif;
+  font-size: 3rem;
+  color: #52377b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem; /* Adjust title size for tablets */
+  }
+  .hero-section {
+    min-height: 25vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem; /* Adjust title size for mobile */
+  }
+
+  .hero-section {
+    min-height: 25vh;
+  }
+}
+
+.about-us-content {
+  color: #52377b;
+  padding: 2rem;
+  font-size: 1.5rem;
+  text-align: left;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .about-us-content {
+    padding: 1.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-content {
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-content {
+    padding: 0.75rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+.vision-content {
+  color: #52377b;
+  padding: 2rem;
+  font-size: 1.5rem;
+  text-align: right;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .vision-content {
+    padding: 1.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .vision-content {
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 480px) {
+  .vision-content {
+    padding: 0.75rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
