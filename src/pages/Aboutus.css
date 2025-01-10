@@ -1,5 +1,5 @@
 /* Hero Section */
-.hero-section {
+.section-hero {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +22,7 @@
   .hero-title {
     font-size: 2.5rem; /* Adjust title size for tablets */
   }
-  .hero-section {
+  .section-hero {
     min-height: 25vh;
   }
 }
@@ -32,7 +32,7 @@
     font-size: 2rem; /* Adjust title size for mobile */
   }
 
-  .hero-section {
+  .section-hero {
     min-height: 25vh;
   }
 }
@@ -209,4 +209,36 @@
   .aboutus-solution {
     padding: 1rem;
   }
+}
+
+.bar-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.bar-desc {
+  font-family: "Alata", sans-serif;
+  font-size: 1rem; /* Adjust the text size */
+  color: #ffff; /* Set a default text color */
+  margin: 10px 0; /* Add some spacing around the div */
+  text-align: left;
+}
+
+.bar-desc ul {
+  list-style-type: disc; /* Use bullet points for the list */
+  padding-left: 20px; /* Add space between bullets and text */
+  margin-left: 0; /* Remove default margins */
+}
+
+.bar-desc ul li {
+  margin-bottom: 5px; /* Add space between list items */
+  line-height: 1.5; /* Increase line height for better readability */
+  color: #fff; /* Slightly lighter text color for items */
 }

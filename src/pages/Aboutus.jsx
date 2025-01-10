@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import PV from "/assets/PV.svg";
+import { FiArrowUpRight } from "react-icons/fi";
 import "./Aboutus.css";
 
 const Aboutus = () => {
+  const [data, setData] = useState([]);
+
+  // Fetch data from the JSON file
+  useEffect(() => {
+    fetch("/data.json")
+      .then((response) => response.json())
+      .then((json) => setData(json))
+      .catch((error) => console.error("Error loading data:", error));
+  }, []);
   return (
     <>
-      <div className="hero-section">
+      <div className="section-hero">
         <h1 className="hero-title">About Us</h1>
       </div>
       <div className="projects">
@@ -31,7 +42,6 @@ const Aboutus = () => {
           culpa qui officia deserunt mollit anim id est laborum.
         </div>
       </div>
-
       <div className="services">
         <div className="services-header">
           <div className="services-title">
@@ -51,7 +61,6 @@ const Aboutus = () => {
           culpa qui officia deserunt mollit anim id est laborum.
         </div>
       </div>
-
       <div className="projects">
         <div className="projects-header">
           <div className="projects-title">
@@ -72,7 +81,6 @@ const Aboutus = () => {
           culpa qui officia deserunt mollit anim id est laborum.
         </div>
       </div>
-
       <div className="aboutus-solution">
         <div className="aboutus-solution-header">
           <p className="aboutus-solution-description">
@@ -89,6 +97,32 @@ const Aboutus = () => {
             </h1>
           </div>
         </div>
+      </div>
+
+      <div className="solution-bar">
+        {data.map((item) => (
+          <div className="bar" key={item.id}>
+            <div className="bar-content">
+              <div className="bar-head">
+                <img src={PV} alt="Icon" className="bar-icon" />
+                <p className="bar-text">{item.text}</p>
+                <div className="solution-arrow">
+                  <FiArrowUpRight className="arrow-icon" />
+                </div>
+              </div>
+              <div className="bar-desc">
+                <ul>
+                  {item.description
+                    .split(".")
+                    .filter((point) => point.trim() !== "") // Remove empty points
+                    .map((point, index) => (
+                      <li key={index}>{point.trim()}.</li> // Trim whitespace and re-add the dot
+                    ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );

@@ -1,26 +1,32 @@
 [
   {
     "id": 1,
-    "text": "UNDERSTANDING CLIENT OBJECTIVES"
+    "text": "UNDERSTANDING CLIENT OBJECTIVES",
+    "description": "In-depth consultation to capture client goals and desired outcomes. Gathering requirements to align deliverables with business needs. Prioritizing client preferences for design, functionality, and scalability."
   },
   {
     "id": 2,
-    "text": "STRATEGIC COLLABORATION"
+    "text": "STRATEGIC COLLABORATION",
+    "description": "In-depth consultation to capture client goals and desired outcomes. Gathering requirements to align deliverables with business needs. Prioritizing client preferences for design, functionality, and scalability."
   },
   {
     "id": 3,
-    "text": "MARKET & COMPETITOR ANALYSIS"
+    "text": "MARKET & COMPETITOR ANALYSIS",
+    "description": "In-depth consultation to capture client goals and desired outcomes. Gathering requirements to align deliverables with business needs. Prioritizing client preferences for design, functionality, and scalability."
   },
   {
     "id": 4,
-    "text": "ADVANCE DEVELOPMENT & EXECUTION"
+    "text": "ADVANCE DEVELOPMENT & EXECUTION",
+    "description": "In-depth consultation to capture client goals and desired outcomes. Gathering requirements to align deliverables with business needs. Prioritizing client preferences for design, functionality, and scalability."
   },
   {
     "id": 5,
-    "text": "SEAMLESS DEPLOYMENT AND SUPPORT"
+    "text": "SEAMLESS DEPLOYMENT AND SUPPORT",
+    "description": "In-depth consultation to capture client goals and desired outcomes. Gathering requirements to align deliverables with business needs. Prioritizing client preferences for design, functionality, and scalability."
   },
   {
     "id": 6,
-    "text": "SUSTAINING RELATIONSHIPS & CONTINUOUS SUPPORT"
+    "text": "SUSTAINING RELATIONSHIPS & CONTINUOUS SUPPORT",
+    "description": "In-depth consultation to capture client goals and desired outcomes. Gathering requirements to align deliverables with business needs. Prioritizing client preferences for design, functionality, and scalability."
   }
 ]
