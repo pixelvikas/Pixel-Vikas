@@ -353,19 +353,23 @@
 @media (max-width: 768px) {
   .client {
     gap: 0.5rem; /* Adjust spacing for small screens */
+    padding: 1rem;
   }
 
   .client img {
     width: 10%; /* Reduce logo size for smaller screens */
+    filter: none;
   }
 }
 
 @media (max-width: 480px) {
   .client {
-    gap: 0.25rem; /* Adjust spacing for very small screens */
+    gap: 1rem; /* Adjust spacing for very small screens */
+    padding: 0.5rem;
   }
 
   .client img {
-    width: 10%; /* Further reduce logo size for very small screens */
+    width: 25%;
+    filter: none;
   }
 }
