@@ -335,7 +335,6 @@
   height: auto; /* Maintain aspect ratio */
   transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
   filter: brightness(0) invert(0); /* Initial style */
-  box-sizing: border-box; /* Include border and padding in size calculation */
 }
 
 .client img:hover {
@@ -371,5 +370,91 @@
   .client img {
     width: 25%;
     filter: none;
+  }
+}
+.technology-stack {
+  padding: 2rem;
+  text-align: center;
+}
+.stack-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
+}
+
+.stack {
+  flex: 1;
+  max-width: 45%; /* Ensure two stacks fit in a row on larger screens */
+  margin: 10px;
+}
+
+.stack h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.stack-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.stack-img img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stack-img img:hover {
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
+  transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .stack {
+    max-width: 100%; /* Stacks will stack vertically on smaller screens */
+  }
+
+  .stack-img img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stack h1 {
+    font-size: 1.2rem;
+  }
+
+  .stack-img img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .stack-img {
+    gap: 0.5rem;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .stack-row {
+    justify-content: center; /* Center items on medium screens */
+    gap: 1rem;
+  }
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 768px) {
+  .stack-row {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align for a clean look */
+    gap: 10px;
   }
 }
