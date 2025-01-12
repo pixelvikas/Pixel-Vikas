@@ -259,7 +259,15 @@ const Aboutus = () => {
       </div>
 
       <div className="technology-stack">
-        <h1>Technology Stack</h1>
+        <div className="aboutus-solution-header">
+          <div className="aboutus-solution-title">
+            <h1 className="highlight-text">*DOMINATING WITH PRECISION!</h1>
+            <h1>
+              TECH{" "}
+              <span className="span-white">STACK</span>
+            </h1>
+          </div>
+        </div>
 
         <div className="stack-row">
           <div className="stack">

@@ -375,6 +375,7 @@
 .technology-stack {
   padding: 2rem;
   text-align: center;
+  color: #4d194d; /* Deep purple text */
 }
 .stack-row {
   display: flex;
@@ -388,11 +389,26 @@
   flex: 1;
   max-width: 45%; /* Ensure two stacks fit in a row on larger screens */
   margin: 10px;
+  padding: 20px; /* Add some padding for better spacing */
+  border-radius: 8px; /* Smooth rounded corners */
+
+  color: #52377b; /* Default text color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle default shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
 }
 
+.stack:hover {
+  transform: scale(1.05); /* Slightly enlarge the stack on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add a prominent shadow effect */
+  background-color: #52377b; /* Change background color on hover */
+  color: #ffa829; /* Change text color on hover */
+}
 .stack h1 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  font-family: "Anton", serif;
+  text-transform: uppercase;
 }
 
 .stack-img {
@@ -419,6 +435,13 @@
 @media (max-width: 768px) {
   .stack {
     max-width: 100%; /* Stacks will stack vertically on smaller screens */
+    .stack {
+      max-width: 100%; /* Stacks will stack vertically on smaller screens */
+      text-align: left; /* Align text to the left */
+      display: flex; /* Use flexbox for layout */
+      flex-direction: column; /* Ensure items stack vertically */
+      align-items: flex-start; /* Align items to the left */
+    }
   }
 
   .stack-img img {
