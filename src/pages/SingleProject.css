@@ -1,0 +1,91 @@
+.singleproject-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #ffa829;
+}
+
+.singleproject-content {
+  flex: 1;
+  width: 100%;
+}
+
+.singleproject-title {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Days One", serif;
+  color: #52377b;
+  margin-bottom: 1rem;
+}
+
+.singleproject-services-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Days One", serif;
+  color: #52377b;
+}
+
+.singleproject-details {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: Alata, sans-serif;
+  color: #52377b;
+}
+
+.singleproject-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  color: #3a3a3a;
+}
+
+.singleproject-mockup {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.singleproject-mockup img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  filter: drop-shadow(6px 8px 12px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease;
+}
+
+.singleproject-mockup img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .singleproject-hero {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .singleproject-content {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .singleproject-title {
+    font-size: 2rem;
+  }
+
+  .singleproject-services-header {
+    font-size: 1.2rem;
+  }
+
+  .singleproject-details {
+    font-size: 0.9rem;
+  }
+
+  .singleproject-description {
+    font-size: 0.9rem;
+  }
+
+  .singleproject-mockup {
+    max-width: 100%;
+  }
+}
