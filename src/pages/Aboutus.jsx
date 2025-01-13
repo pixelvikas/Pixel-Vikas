@@ -121,7 +121,7 @@ const Aboutus = () => {
   return (
     <>
       <div className="section-hero">
-        <h1 className="hero-title">About Us</h1>
+        <h1 className="hero-title">ABOUT US</h1>
       </div>
       <div className="projects">
         <div className="projects-header">
@@ -263,8 +263,7 @@ const Aboutus = () => {
           <div className="aboutus-solution-title">
             <h1 className="highlight-text">*DOMINATING WITH PRECISION!</h1>
             <h1>
-              TECH{" "}
-              <span className="span-white">STACK</span>
+              TECH <span className="span-white">STACK</span>
             </h1>
           </div>
         </div>
