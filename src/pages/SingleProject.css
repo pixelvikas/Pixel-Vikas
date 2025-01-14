@@ -179,8 +179,7 @@
   height: 40%;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Added filter to the transition */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -196,7 +195,7 @@
 /* Hover effect */
 .project-folder-content:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow(6px 8px 12px rgba(0, 0, 0, 0.5));
 }
 
 /* Responsive design for tablets */

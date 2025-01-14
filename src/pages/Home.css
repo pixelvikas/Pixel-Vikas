@@ -756,8 +756,7 @@
   height: 40%;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Added filter to the transition */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -773,7 +772,7 @@
 /* Hover effect */
 .folder:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow(6px 8px 12px rgba(0, 0, 0, 0.5));
 }
 
 /* Responsive design for tablets */
@@ -1398,14 +1397,13 @@
   justify-content: center;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Added filter to the transition */
   max-width: 300px; /* Set max width for consistent sizing */
 }
 
 .blog-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  filter: drop-shadow(6px 8px 12px rgba(0, 0, 0, 0.5));
 }
 
 .blog-image {
