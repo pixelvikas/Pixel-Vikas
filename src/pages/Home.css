@@ -1088,7 +1088,7 @@
   background-color: #52377b;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   min-height: 100vh;
   padding: 20px;
