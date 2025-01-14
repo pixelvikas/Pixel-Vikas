@@ -3,18 +3,6 @@ import PV from "/assets/PV.svg";
 import { FiArrowUpRight } from "react-icons/fi";
 import "./Aboutus.css";
 
-import client1 from "/assets/client1.png";
-import client3 from "/assets/client3.png";
-import client4 from "/assets/client4.png";
-import client5 from "/assets/client5.png";
-import client6 from "/assets/client6.png";
-import client7 from "/assets/client7.png";
-import client9 from "/assets/client9.png";
-import client10 from "/assets/client10.png";
-import client11 from "/assets/client11.png";
-import client12 from "/assets/client12.png";
-import client13 from "/assets/client13.png";
-
 import d1 from "/assets/techstack/figma.svg";
 import d2 from "/assets/techstack/ps.svg";
 import d3 from "/assets/techstack/ai.svg";
@@ -109,13 +97,28 @@ import so10 from "/assets/techstack/meta.svg";
 
 const Aboutus = () => {
   const [data, setData] = useState([]);
+  const [logos, setLogos] = useState([]);
 
   // Fetch data from the JSON file
   useEffect(() => {
-    fetch("/data.json")
+    fetch("/solutions.json")
       .then((response) => response.json())
       .then((json) => setData(json))
       .catch((error) => console.error("Error loading data:", error));
+  }, []);
+
+  useEffect(() => {
+    const fetchClientLogos = async () => {
+      try {
+        const response = await fetch("/clientlogo.json"); // Adjust path to your JSON file
+        const data = await response.json();
+        setLogos(data);
+      } catch (error) {
+        console.error("Error fetching client logos:", error);
+      }
+    };
+
+    fetchClientLogos();
   }, []);
 
   return (
@@ -138,13 +141,19 @@ const Aboutus = () => {
         </div>
 
         <div className="about-us-content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          At Pixel Vikas, we are a premier digital and IT solutions provider
+          committed to driving innovation and delivering exceptional results for
+          businesses of all sizes. Our comprehensive suite of services includes
+          Social Media Marketing, Website Development, Mobile Application
+          Development, Domain Services, Graphics Designing, Hosting Services,
+          Search Engine Optimization (SEO), and cutting-edge No-Code Development
+          solutions. With a passion for technology and a focus on client
+          success, we empower businesses to build a robust online presence,
+          optimize operations, and achieve their digital transformation goals.
+          Whether it's creating stunning visuals, developing user-friendly
+          websites, or crafting scalable mobile apps, our expert team ensures
+          tailored solutions that align perfectly with your needs, helping you
+          unlock your brand's potential and thrive in today’s digital landscape.
         </div>
       </div>
       <div className="services">
@@ -157,13 +166,17 @@ const Aboutus = () => {
           </div>
         </div>
         <div className="vision-content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          At Pixel Vikas, our vision is to become a global leader in digital and
+          IT solutions, empowering businesses to thrive in an ever-evolving
+          technological landscape. We aim to drive innovation, deliver
+          excellence, and foster long-term partnerships by providing
+          cutting-edge services that transform ideas into reality. By blending
+          creativity, technology, and strategy, we envision a future where
+          businesses of all sizes can achieve unparalleled growth, enhance their
+          digital footprint, and create meaningful connections with their
+          audiences. Through our unwavering commitment to innovation and client
+          success, we aspire to redefine possibilities and shape a smarter, more
+          connected world.
         </div>
       </div>
       <div className="projects">
@@ -177,13 +190,17 @@ const Aboutus = () => {
         </div>
 
         <div className="about-us-content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Our mission at Pixel Vikas is to empower businesses with innovative
+          and reliable digital and IT solutions that drive growth, efficiency,
+          and success. We are dedicated to delivering excellence through our
+          services, including Social Media Marketing, Website Development,
+          Mobile Application Development, Domain Services, Graphics Designing,
+          Hosting Services, SEO, and No-Code Development. By prioritizing client
+          satisfaction, fostering creativity, and leveraging cutting-edge
+          technologies, we aim to provide customized solutions that meet the
+          unique needs of each business. Our goal is to be a trusted partner in
+          our clients’ digital journeys, enabling them to achieve their full
+          potential in an increasingly competitive and connected world.
         </div>
       </div>
       <div className="aboutus-solution">
@@ -242,20 +259,11 @@ const Aboutus = () => {
             </h1>
           </div>
         </div>
-      </div>
-
-      <div className="client">
-        <img src={client1} alt="Client 1" />
-        <img src={client3} alt="Client 3" />
-        <img src={client4} alt="Client 4" />
-        <img src={client5} alt="Client 5" />
-        <img src={client6} alt="Client 6" />
-        <img src={client7} alt="Client 7" />
-        <img src={client9} alt="Client 9" />
-        <img src={client10} alt="Client 10" />
-        <img src={client11} alt="Client 11" />
-        <img src={client12} alt="Client 12" />
-        <img src={client13} alt="Client 13" />
+        <div className="client">
+          {logos.map((logo, index) => (
+            <img key={index} src={logo.src} alt={logo.alt} />
+          ))}
+        </div>
       </div>
 
       <div className="technology-stack">

@@ -1,0 +1,34 @@
+[
+    {
+        "image": "./assets/Services/service1.png",
+        "alt_text": "Service 1"
+    },
+    {
+        "image": "./assets/Services/service2.png",
+        "alt_text": "Service 2"
+    },
+    {
+        "image": "./assets/Services/service3.png",
+        "alt_text": "Service 3"
+    },
+    {
+        "image": "./assets/Services/service4.png",
+        "alt_text": "Service 4"
+    },
+    {
+        "image": "./assets/Services/service5.png",
+        "alt_text": "Service 5"
+    },
+    {
+        "image": "./assets/Services/service6.png",
+        "alt_text": "Service 6"
+    },
+    {
+        "image": "./assets/Services/service7.png",
+        "alt_text": "Service 7"
+    },
+    {
+        "image": "./assets/Services/service8.png",
+        "alt_text": "Service 8"
+    }
+]

@@ -7,6 +7,30 @@ import { TbBrandX } from "react-icons/tb"; // For the 'X' (Twitter alternative)
 import "./Contactus.css";
 
 const Contactus = () => {
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "0f053934-fe51-4a86-9443-f600e8cd85c0");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
   return (
     <>
       {/* Hero Section */}
@@ -82,7 +106,7 @@ const Contactus = () => {
             LET'S <span className="span-purple"> TALK</span>{" "}
           </h1>
           <h2 className="contact-form-subtitle">Consultation is free</h2>
-          <form action="#" method="post" className="form">
+          <form onSubmit={onSubmit} className="form">
             <input
               type="text"
               name="full-name"

@@ -1,14 +1,14 @@
 import React from "react";
 import "./Services.css";
 
-import service1 from "/assets/service1.png";
-import service2 from "/assets/service2.png";
-import service3 from "/assets/service3.png";
-import service4 from "/assets/service4.png";
-import service5 from "/assets/service5.png";
-import service6 from "/assets/service6.png";
-import service7 from "/assets/service7.png";
-import service8 from "/assets/service8.png";
+import service1 from "/assets/Services/service1.png";
+import service2 from "/assets/Services/service2.png";
+import service3 from "/assets/Services/service3.png";
+import service4 from "/assets/Services/service4.png";
+import service5 from "/assets/Services/service5.png";
+import service6 from "/assets/Services/service6.png";
+import service7 from "/assets/Services/service7.png";
+import service8 from "/assets/Services/service8.png";
 const Services = () => {
   const services = [
     { id: 1, src: service1, alt: "Service 1" },

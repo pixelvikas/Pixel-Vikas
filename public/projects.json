@@ -1,0 +1,65 @@
+[
+    {
+        "id": "rajkosh",
+        "project_name": "Rajkosh",
+        "project_details": "Website | Domain | Server",
+        "image": "/assets/Project/Rajkosh/rajkosh1.png",
+        "link": "/projects/rajkosh",
+        "alt_text": "Project 1",
+        "services": [
+            "UX/UI",
+            "Social Media",
+            "Server"
+        ],
+        "challenge": {
+            "image": "/assets/Project/Rajkosh/challenge.png",
+            "description": "Challenges faced by the client."
+        },
+        "solution": {
+            "image": "/assets/Project/Rajkosh/solution.png",
+            "description": "The solution provided to the client."
+        },
+        "project_folder_images": [
+            "/assets/Project/Rajkosh/brief.png",
+            "/assets/Project/Rajkosh/challenge.png"
+        ],
+        "mockup_image": "/assets/Project/Rajkosh/mockup.png",
+        "gallery_images": [
+            "/assets/Project/Rajkosh/rajkosh1.png",
+            "/assets/Project/Rajkosh/rajkosh2.png",
+            "/assets/Project/Rajkosh/rajkosh3.png",
+            "/assets/Project/Rajkosh/rajkosh4.png",
+            "/assets/Project/Rajkosh/rajkosh5.png",
+            "/assets/Project/Rajkosh/rajkosh6.png"
+        ]
+    },
+    {
+        "id": "skylark",
+        "project_name": "Skylark",
+        "project_details": "Website | Domain | Server",
+        "image": "/assets/Project/Skylark/skylark1.png",
+        "link": "/projects/skylark",
+        "alt_text": "Project 2",
+        "services": [
+            "UX/UI",
+            "SEO",
+            "Mobile App"
+        ],
+        "challenge": {
+            "image": "/assets/Project/Skylark/challenge.png",
+            "description": "Challenge faced while developing the project."
+        },
+        "solution": {
+            "image": "/assets/Project/Skylark/solution.png",
+            "description": "Solution to overcome the challenge."
+        },
+        "project_folder_images": [
+            "/assets/Project/Skylark/brief.png",
+            "/assets/Project/Skylark/challenge.png"
+        ],
+        "mockup_image": "/assets/Project/Skylark/mockup.png",
+        "gallery_images": [
+            "/assets/Project/Skylark/skylark1.png"
+        ]
+    }
+]

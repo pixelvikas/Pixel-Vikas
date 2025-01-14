@@ -116,7 +116,7 @@ const Header = () => {
         </div>
 
         {/* Logo */}
-        <Link className="nav__logo">
+        <Link to="/contact-us" className="nav__logo">
           <div>Lets Talk</div>
         </Link>
       </nav>

@@ -1,0 +1,429 @@
+{
+    "design": [
+        {
+            "key": "design1",
+            "src": "/assets/techstack/figma.svg",
+            "alt": "Figma"
+        },
+        {
+            "key": "design2",
+            "src": "/assets/techstack/ps.svg",
+            "alt": "Photoshop"
+        },
+        {
+            "key": "design3",
+            "src": "/assets/techstack/ai.svg",
+            "alt": "Illustrator"
+        },
+        {
+            "key": "design4",
+            "src": "/assets/techstack/canva.svg",
+            "alt": "Canva"
+        },
+        {
+            "key": "design5",
+            "src": "/assets/techstack/coreldraw.svg",
+            "alt": "CorelDRAW"
+        },
+        {
+            "key": "design6",
+            "src": "/assets/techstack/webflow.svg",
+            "alt": "Webflow"
+        }
+    ],
+    "front_end": [
+        {
+            "key": "front_end1",
+            "src": "/assets/techstack/angular.svg",
+            "alt": "Angular"
+        },
+        {
+            "key": "front_end2",
+            "src": "/assets/techstack/react.svg",
+            "alt": "React"
+        },
+        {
+            "key": "front_end3",
+            "src": "/assets/techstack/vue.svg",
+            "alt": "Vue"
+        },
+        {
+            "key": "front_end4",
+            "src": "/assets/techstack/tailwindcss.svg",
+            "alt": "Tailwind CSS"
+        },
+        {
+            "key": "front_end5",
+            "src": "/assets/techstack/html.svg",
+            "alt": "HTML"
+        },
+        {
+            "key": "front_end6",
+            "src": "/assets/techstack/css.svg",
+            "alt": "CSS"
+        },
+        {
+            "key": "front_end7",
+            "src": "/assets/techstack/js.svg",
+            "alt": "JavaScript"
+        },
+        {
+            "key": "front_end8",
+            "src": "/assets/techstack/sass.svg",
+            "alt": "Sass"
+        },
+        {
+            "key": "front_end9",
+            "src": "/assets/techstack/threejs.svg",
+            "alt": "Three.js"
+        },
+        {
+            "key": "front_end10",
+            "src": "/assets/techstack/bootstrap.svg",
+            "alt": "Bootstrap"
+        },
+        {
+            "key": "front_end11",
+            "src": "/assets/techstack/redux.svg",
+            "alt": "Redux"
+        },
+        {
+            "key": "front_end12",
+            "src": "/assets/techstack/redis.svg",
+            "alt": "Redis"
+        },
+        {
+            "key": "front_end13",
+            "src": "/assets/techstack/gsap.svg",
+            "alt": "GSAP"
+        }
+    ],
+    "back_end": [
+        {
+            "key": "back_end1",
+            "src": "/assets/techstack/aws.svg",
+            "alt": "AWS"
+        },
+        {
+            "key": "back_end2",
+            "src": "/assets/techstack/ruby.svg",
+            "alt": "Ruby"
+        },
+        {
+            "key": "back_end3",
+            "src": "/assets/techstack/dj.svg",
+            "alt": "Django"
+        },
+        {
+            "key": "back_end4",
+            "src": "/assets/techstack/express.svg",
+            "alt": "Express"
+        },
+        {
+            "key": "back_end5",
+            "src": "/assets/techstack/laravel.svg",
+            "alt": "Laravel"
+        },
+        {
+            "key": "back_end6",
+            "src": "/assets/techstack/docker.svg",
+            "alt": "Docker"
+        },
+        {
+            "key": "back_end7",
+            "src": "/assets/techstack/go.svg",
+            "alt": "Go"
+        },
+        {
+            "key": "back_end8",
+            "src": "/assets/techstack/mongodb.svg",
+            "alt": "MongoDB"
+        },
+        {
+            "key": "back_end9",
+            "src": "/assets/techstack/mysql.svg",
+            "alt": "MySQL"
+        },
+        {
+            "key": "back_end10",
+            "src": "/assets/techstack/nextjs.svg",
+            "alt": "Next.js"
+        },
+        {
+            "key": "back_end11",
+            "src": "/assets/techstack/nodejs.svg",
+            "alt": "Node.js"
+        },
+        {
+            "key": "back_end12",
+            "src": "/assets/techstack/deno.svg",
+            "alt": "Deno"
+        },
+        {
+            "key": "back_end13",
+            "src": "/assets/techstack/ci.svg",
+            "alt": "CI"
+        },
+        {
+            "key": "back_end14",
+            "src": "/assets/techstack/reactnativefirebase.svg",
+            "alt": "React Native Firebase"
+        },
+        {
+            "key": "back_end15",
+            "src": "/assets/techstack/streamlit.svg",
+            "alt": "Streamlit"
+        },
+        {
+            "key": "back_end16",
+            "src": "/assets/techstack/flask.svg",
+            "alt": "Flask"
+        },
+        {
+            "key": "back_end17",
+            "src": "/assets/techstack/firebase.svg",
+            "alt": "Firebase"
+        },
+        {
+            "key": "back_end18",
+            "src": "/assets/techstack/jupyter.svg",
+            "alt": "Jupyter"
+        },
+        {
+            "key": "back_end19",
+            "src": "/assets/techstack/php.svg",
+            "alt": "PHP"
+        },
+        {
+            "key": "back_end20",
+            "src": "/assets/techstack/psql.svg",
+            "alt": "PostgreSQL"
+        }
+    ],
+    "mobile": [
+        {
+            "key": "mobile1",
+            "src": "/assets/techstack/react.svg",
+            "alt": "React"
+        },
+        {
+            "key": "mobile2",
+            "src": "/assets/techstack/kotlin.svg",
+            "alt": "Kotlin"
+        },
+        {
+            "key": "mobile3",
+            "src": "/assets/techstack/android.svg",
+            "alt": "Android"
+        },
+        {
+            "key": "mobile4",
+            "src": "/assets/techstack/swift.svg",
+            "alt": "Swift"
+        },
+        {
+            "key": "mobile5",
+            "src": "/assets/techstack/flutter.svg",
+            "alt": "Flutter"
+        }
+    ],
+    "server": [
+        {
+            "key": "server1",
+            "src": "/assets/techstack/aws.svg",
+            "alt": "AWS"
+        },
+        {
+            "key": "server2",
+            "src": "/assets/techstack/gcloud.svg",
+            "alt": "Google Cloud"
+        },
+        {
+            "key": "server3",
+            "src": "/assets/techstack/ubuntu.svg",
+            "alt": "Ubuntu"
+        },
+        {
+            "key": "server4",
+            "src": "/assets/techstack/linux.svg",
+            "alt": "Linux"
+        },
+        {
+            "key": "server5",
+            "src": "/assets/techstack/nginx.svg",
+            "alt": "Nginx"
+        },
+        {
+            "key": "server6",
+            "src": "/assets/techstack/redhat.svg",
+            "alt": "Red Hat"
+        },
+        {
+            "key": "server7",
+            "src": "/assets/techstack/kali.svg",
+            "alt": "Kali Linux"
+        }
+    ],
+    "no_code": [
+        {
+            "key": "no_code1",
+            "src": "/assets/techstack/framer.svg",
+            "alt": "Framer"
+        },
+        {
+            "key": "no_code2",
+            "src": "/assets/techstack/wix.svg",
+            "alt": "Wix"
+        },
+        {
+            "key": "no_code3",
+            "src": "/assets/techstack/wpress.svg",
+            "alt": "WordPress"
+        },
+        {
+            "key": "no_code4",
+            "src": "/assets/techstack/shopify.svg",
+            "alt": "Shopify"
+        },
+        {
+            "key": "no_code5",
+            "src": "/assets/techstack/blogger.svg",
+            "alt": "Blogger"
+        }
+    ],
+    "payment_gateway": [
+        {
+            "key": "payment_gateway1",
+            "src": "/assets/techstack/phonepe.svg",
+            "alt": "PhonePe"
+        },
+        {
+            "key": "payment_gateway2",
+            "src": "/assets/techstack/razorpay.svg",
+            "alt": "Razorpay"
+        },
+        {
+            "key": "payment_gateway3",
+            "src": "/assets/techstack/stripe.svg",
+            "alt": "Stripe"
+        }
+    ],
+    "domain": [
+        {
+            "key": "domain1",
+            "src": "/assets/techstack/godaddy.svg",
+            "alt": "GoDaddy"
+        },
+        {
+            "key": "domain2",
+            "src": "/assets/techstack/hostinger.svg",
+            "alt": "Hostinger"
+        },
+        {
+            "key": "domain3",
+            "src": "/assets/techstack/namecheap.svg",
+            "alt": "Namecheap"
+        },
+        {
+            "key": "domain4",
+            "src": "/assets/techstack/cloudflare.svg",
+            "alt": "Cloudflare"
+        }
+    ],
+    "hosting": [
+        {
+            "key": "hosting1",
+            "src": "/assets/techstack/vercel.svg",
+            "alt": "Vercel"
+        },
+        {
+            "key": "hosting2",
+            "src": "/assets/techstack/digitalocean.svg",
+            "alt": "DigitalOcean"
+        },
+        {
+            "key": "hosting3",
+            "src": "/assets/techstack/hostinger.svg",
+            "alt": "Hostinger"
+        },
+        {
+            "key": "hosting4",
+            "src": "/assets/techstack/cpanel.svg",
+            "alt": "cPanel"
+        },
+        {
+            "key": "hosting5",
+            "src": "/assets/techstack/netlify.svg",
+            "alt": "Netlify"
+        }
+    ],
+    "version_control": [
+        {
+            "key": "version_control1",
+            "src": "/assets/techstack/git.svg",
+            "alt": "Git"
+        },
+        {
+            "key": "version_control2",
+            "src": "/assets/techstack/github.svg",
+            "alt": "GitHub"
+        },
+        {
+            "key": "version_control3",
+            "src": "/assets/techstack/gitlab.svg",
+            "alt": "GitLab"
+        }
+    ],
+    "social_media": [
+        {
+            "key": "social_media1",
+            "src": "/assets/techstack/instagram.svg",
+            "alt": "Instagram"
+        },
+        {
+            "key": "social_media2",
+            "src": "/assets/techstack/facebook.svg",
+            "alt": "Facebook"
+        },
+        {
+            "key": "social_media3",
+            "src": "/assets/techstack/youtube.svg",
+            "alt": "YouTube"
+        },
+        {
+            "key": "social_media4",
+            "src": "/assets/techstack/whatsappb.svg",
+            "alt": "WhatsApp"
+        },
+        {
+            "key": "social_media5",
+            "src": "/assets/techstack/x.svg",
+            "alt": "X (formerly Twitter)"
+        },
+        {
+            "key": "social_media6",
+            "src": "/assets/techstack/linkedin.svg",
+            "alt": "LinkedIn"
+        },
+        {
+            "key": "social_media7",
+            "src": "/assets/techstack/gmail.svg",
+            "alt": "Gmail"
+        },
+        {
+            "key": "social_media8",
+            "src": "/assets/techstack/gmap.svg",
+            "alt": "Google Maps"
+        },
+        {
+            "key": "social_media9",
+            "src": "/assets/techstack/googleads.svg",
+            "alt": "Google Ads"
+        },
+        {
+            "key": "social_media10",
+            "src": "/assets/techstack/meta.svg",
+            "alt": "Meta"
+        }
+    ]
+}

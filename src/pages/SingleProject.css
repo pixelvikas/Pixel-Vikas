@@ -344,11 +344,12 @@
   }
 }
 
-/* Fade Effects */
-.fade-out {
-  opacity: 0; /* Image fades out */
+.fade-in {
+  z-index: 2;
+  opacity: 1;
 }
 
-.fade-in {
-  opacity: 1; /* Image fades in */
+.fade-out {
+  z-index: 1;
+  opacity: 0;
 }

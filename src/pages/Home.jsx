@@ -1,84 +1,113 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook
+
 import "./Home.css";
 import video1 from "/assets/video1.mp4";
 import video2 from "/assets/video2.mp4";
 import PV from "/assets/PV.svg";
-import client1 from "/assets/client1.png";
-import client3 from "/assets/client3.png";
-import client4 from "/assets/client4.png";
-import client5 from "/assets/client5.png";
-import client6 from "/assets/client6.png";
-import client7 from "/assets/client7.png";
-import client9 from "/assets/client9.png";
-import client10 from "/assets/client10.png";
-import client11 from "/assets/client11.png";
-import client12 from "/assets/client12.png";
-import client13 from "/assets/client13.png";
-
-import review1 from "/assets/review1.png";
-import review2 from "/assets/review2.png";
-import review3 from "/assets/review3.png";
-
-import blog1 from "/assets/Blog1.png";
-import blog2 from "/assets/Blog2.png";
-import blog3 from "/assets/Blog3.png";
 
 import speaker from "/assets/speaker.png";
 import like from "/assets/like.png";
-
-import service1 from "/assets/service1.png";
-import service2 from "/assets/service2.png";
-
-import project1 from "/assets/project1.png";
-import project2 from "/assets/project2.png";
-import project3 from "/assets/project3.png";
-import project4 from "/assets/project4.png";
 
 import { FiArrowUpRight } from "react-icons/fi";
 import { HiArrowLongRight } from "react-icons/hi2";
 
 const Home = () => {
-  const clientImages = [
-    client1,
-    // client2,  //these logo need to be small
-    client3,
-    client4,
-    client5,
-    client6,
-    client7,
-    // client8,//these logo need to be small
-    client9,
-    client10,
-    client11,
-    client12,
-    client13,
-  ];
+  const navigate = useNavigate(); // Initialize the navigate function
 
-  const reviews = [
-    review1,
-    review3,
-    review2,
-    review1,
-    review3,
-    review2,
-    review1,
-    review3,
-    review2,
-    review1,
-    review3,
-    review2,
-    review1,
-  ];
+  const handleClick = () => {
+    navigate("/projects"); // Navigate to /project when the button is clicked
+  };
+
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "0f053934-fe51-4a86-9443-f600e8cd85c0");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
 
   const [data, setData] = useState([]);
+  const [clientLogos, setClientLogos] = useState([]);
+  const [services, setServices] = useState([]);
+  const [projects, setProjects] = useState([]);
+  const [reviews, setReviews] = useState([]);
 
   // Fetch data from the JSON file
   useEffect(() => {
-    fetch("/data.json")
+    fetch("/solutions.json")
       .then((response) => response.json())
       .then((json) => setData(json))
       .catch((error) => console.error("Error loading data:", error));
   }, []);
+
+  useEffect(() => {
+    // Fetch the JSON data from the file
+    fetch("/projects.json")
+      .then((response) => response.json())
+      .then((data) => setProjects(data))
+      .catch((error) =>
+        console.error("Error fetching the projects data:", error)
+      );
+  }, []);
+
+  useEffect(() => {
+    // Fetch the JSON data from the file
+    fetch("/services.json")
+      .then((response) => response.json())
+      .then((data) => setServices(data))
+      .catch((error) =>
+        console.error("Error fetching the services data:", error)
+      );
+  }, []);
+
+  // Fetch client logos from the JSON file
+  useEffect(() => {
+    const fetchLogos = async () => {
+      try {
+        const response = await fetch("/clientlogo.json"); // Adjust path to where your JSON is located
+        const data = await response.json();
+        setClientLogos(data);
+      } catch (error) {
+        console.error("Error fetching client logos:", error);
+      }
+    };
+
+    fetchLogos();
+  }, []);
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const response = await fetch("/reviews.json"); // Adjust path to your JSON file
+        const data = await response.json();
+        setReviews(data.reviews); // Assuming the JSON structure contains a "reviews" array
+      } catch (error) {
+        console.error("Error fetching reviews:", error);
+      }
+    };
+
+    fetchReviews();
+  }, []);
+
   return (
     <>
       <div className="home-container">
@@ -137,12 +166,12 @@ const Home = () => {
         <div className="slider">
           <div className="logos">
             <div className="logos-slide">
-              {clientImages.concat(clientImages).map((image, index) => (
+              {clientLogos.concat(clientLogos).map((logo, index) => (
                 <img
                   key={index}
-                  src={image}
+                  src={logo.src}
                   className="logo-item"
-                  alt={`Client ${index + 1}`}
+                  alt={logo.alt}
                 />
               ))}
             </div>
@@ -186,9 +215,11 @@ const Home = () => {
         <div className="services-header">
           <p className="services-description">
             We Provide Efficient, Digital & IT Solution
-            <button className="arrow-button">
-              See all Services <HiArrowLongRight />
-            </button>
+            <Link to="/services">
+              <button className="arrow-button">
+                See all Services <HiArrowLongRight />
+              </button>
+            </Link>
           </p>
           <div className="services-title">
             <h1 className="highlight-text">*YOU KNOW WHAT?!</h1>
@@ -201,18 +232,15 @@ const Home = () => {
           </div>
         </div>
         <div className="services-folder">
-          <div className="folder">
-            <img src={service1} alt="Service 1" className="folder-image" />
-          </div>
-          <div className="folder">
-            <img src={service2} alt="Service 2" className="folder-image" />
-          </div>
-          <div className="folder">
-            <img src={service2} alt="Service 2" className="folder-image" />
-          </div>
-          <div className="folder">
-            <img src={service1} alt="Service 1" className="folder-image" />
-          </div>
+          {services.slice(0, 4).map((service, index) => (
+            <div className="folder" key={index}>
+              <img
+                src={service.image} // Dynamically set image source
+                alt={service.alt_text} // Dynamically set alt text
+                className="folder-image"
+              />
+            </div>
+          ))}
         </div>
       </div>
 
@@ -235,37 +263,18 @@ const Home = () => {
         </div>
 
         <div className="project-list">
-          <div className="project-item">
-            <img src={project1} alt="Project 1" />
-            <div className="project-data">
-              <h1 className="project-name">Rajkosh</h1>
-              <h1 className="project-details">Website | Domain | Server</h1>
-            </div>
-          </div>
-          <div className="project-item">
-            <img src={project2} alt="Project 2" />
-            <div className="project-data">
-              <h1 className="project-name">SKYLARK</h1>
-              <h1 className="project-details">Website | Domain | Server</h1>
-            </div>
-          </div>
-          <div className="project-item">
-            <img src={project3} alt="Project 3" />
-            <div className="project-data">
-              <h1 className="project-name">Iconic Students Academy</h1>
-              <h1 className="project-details">Website | Domain | Server</h1>
-            </div>
-          </div>
-          <div className="project-item">
-            <img src={project4} alt="Project 4" />
-            <div className="project-data">
-              <h1 className="project-name">Real Homes</h1>
-              <h1 className="project-details">Website | Domain | Server</h1>
-            </div>
-          </div>
+          {projects.map((project, index) => (
+            <Link to={project.link || "#"} key={index} className="project-item">
+              <img src={project.image} alt={project.alt_text} />
+              <div className="project-data">
+                <h1 className="project-name">{project.project_name}</h1>
+                <h1 className="project-details">{project.project_details}</h1>
+              </div>
+            </Link>
+          ))}
         </div>
 
-        <button className="project-button">
+        <button className="project-button" onClick={handleClick}>
           <span>View More</span>
           <div className="project-arrow">
             <HiArrowLongRight />
@@ -278,7 +287,7 @@ const Home = () => {
           <h1 className="contact-header">Let's Talk</h1>
           <h2 className="contact-subtitle">Consultation is free</h2>
 
-          <form action="#" method="post" className="form">
+          <form onSubmit={onSubmit} className="form">
             <input
               type="text"
               name="full-name"
@@ -357,7 +366,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="services">
+      {/* <div className="services">
         <div className="services-header">
           <p className="services-description">
             "Our Blog: Fresh Insights and Valuable Content, Delivered Every
@@ -370,9 +379,9 @@ const Home = () => {
               <span className="span-yellow">LATEST BLOGS</span>
             </h1>
           </div>
-        </div>
+        </div> */}
 
-        <div className="blogs">
+      {/* <div className="blogs">
           {[blog1, blog2, blog3, blog1].map((blog, index) => (
             <div key={index} className="blog-card">
               <img
@@ -382,14 +391,14 @@ const Home = () => {
               />
             </div>
           ))}
-        </div>
-        <button className="project-button">
+        </div> */}
+      {/* <button className="project-button">
           <span>View More</span>
           <div className="project-arrow">
             <HiArrowLongRight />
           </div>
         </button>
-      </div>
+      </div> */}
 
       <div className="newsletter">
         <h1 className="newsletter-title">SUBSCRIBE OUR NEWSLETTER</h1>
@@ -397,12 +406,17 @@ const Home = () => {
           Join Our Newsletter: Stay Updated, Exclusive Content, Sign Up
         </p>
         <div className="newsletter-form">
-          <input
-            type="email"
-            placeholder="Enter your Email Address"
-            className="newsletter-input"
-          />
-          <button className="newsletter-button">SUBSCRIBE</button>
+          <form onSubmit={onSubmit} className="letter-form">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your Email Address"
+              className="newsletter-input"
+            />
+            <button type="submit" className="newsletter-button">
+              SUBSCRIBE
+            </button>
+          </form>
         </div>
         <p className="newsletter-privacy">
           We care about your data in our{" "}

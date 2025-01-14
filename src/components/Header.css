@@ -43,11 +43,7 @@
 /* Optional hover effect for better interactivity */
 .nav__logo:hover {
   color: var(--highlight-color, #ffa829); /* Changes color on hover */
-  background-color: var(
-    --hover-bg-color,
-    #52377b
-  ); /* Subtle background change */
-  border-color: var(--highlight-color, #000); /* Border color change */
+  background-color: var(--hover-bg-color, #52377b);
 }
 
 .nav__menu {

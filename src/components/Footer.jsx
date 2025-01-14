@@ -6,6 +6,30 @@ import { TbBrandX } from "react-icons/tb"; // For the 'X' (Twitter alternative)
 import { FiArrowUpRight } from "react-icons/fi";
 
 const Footer = () => {
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "0f053934-fe51-4a86-9443-f600e8cd85c0");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
   return (
     <footer className="footer">
       {/* Top Section */}
@@ -49,23 +73,16 @@ const Footer = () => {
           <h2 className="follow-title">Follow Us</h2>
           <div className="social-icons">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/pixelvikas/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
               <FaInstagram />
             </a>
+
             <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-            >
-              <FaYoutube />
-            </a>
-            <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/pixel-vikas/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -73,7 +90,7 @@ const Footer = () => {
               <FaLinkedin />
             </a>
             <a
-              href="https://x.com"
+              href="https://x.com/Pixel_Vikas?t=TASFKKoRdR6WnSkblwr_kQ&s=09"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="X (Twitter)"
@@ -100,16 +117,13 @@ const Footer = () => {
               <a href="/services">Services</a>
             </li>
             <li>
-              <a href="/blogs">Blogs</a>
-            </li>
-            <li>
-              <a href="/solutions">Solutions</a>
-            </li>
-            <li>
               <a href="/projects">Projects</a>
             </li>
             <li>
               <a href="/contact-us">Contact us</a>
+            </li>
+            <li>
+              <a href="/blogs">Blogs</a>
             </li>
           </ul>
         </div>
@@ -122,18 +136,21 @@ const Footer = () => {
             email below.
           </p>
           <div className="footer-form">
-            <input
-              type="email"
-              placeholder="Enter your Email Address"
-              className="footer__input"
-            />
-            <button className="footer-submit-button">
-              <div className="footer-submit">
-                <span className="footer-arrow-icon">
-                  <FiArrowUpRight />
-                </span>
-              </div>
-            </button>
+            <form onSubmit={onSubmit} className="footer-news">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your Email Address"
+                className="footer__input"
+              />
+              <button type="submit" className="footer-submit-button">
+                <div className="footer-submit">
+                  <span className="footer-arrow-icon">
+                    <FiArrowUpRight />
+                  </span>
+                </div>
+              </button>
+            </form>
           </div>
         </div>
       </div>

@@ -81,6 +81,20 @@ img {
   display: block;
 }
 
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+
+  background-color: #52377b;
+}
+
 /*=============== REUSABLE CLASSES ===============*/
 .section {
   padding: 4.5rem 1rem 2rem;
@@ -98,4 +112,33 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-button img {
+  width: 28px;
+  height: 28px;
+}
+
+@media (max-width: 480px) {
+  .whatsapp-button {
+    bottom: 80px; /* Adjust the bottom value for mobile screens */
+  }
 }
