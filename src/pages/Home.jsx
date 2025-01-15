@@ -108,6 +108,9 @@ const Home = () => {
     fetchReviews();
   }, []);
 
+  const handleNavigation = () => {
+    navigate("/contact-us"); // Navigate to the /contact-us route
+  };
   return (
     <>
       <div className="home-container">
@@ -146,7 +149,7 @@ const Home = () => {
         {/* Call-to-Action Section */}
         <div className="cta-section">
           <div className="cta-content">
-            <button className="cta-button">
+            <button className="cta-button" onClick={handleNavigation}>
               Get Started
               <div className="arrow">
                 <FiArrowUpRight />

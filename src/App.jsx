@@ -11,8 +11,9 @@ import Contactus from "./pages/Contactus";
 import SingleBlog from "./pages/SingleBlog";
 import SingleProject from "./pages/SingleProject";
 import AutoScroll from "./components/AutoScroll";
-
+import Error from "./pages/Error";
 import WhatsAppButton from "./components/WhatsAppButton";
+import PrivacyPolicy from "./pages/PolicyPage";
 
 const App = () => {
   return (
@@ -28,6 +29,8 @@ const App = () => {
         <Route path="/contact-us" element={<Contactus />} />
         <Route path="/projects/:id" element={<SingleProject />} />
         <Route path="/blogs/:id" element={<SingleBlog />} />
+        <Route path="/*" element={<Error />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <WhatsAppButton phoneNumber="9324389141" />
       <Footer />

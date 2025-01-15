@@ -1,0 +1,100 @@
+/* styles.css */
+
+/* Container styling */
+.privacy-policy-container {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Title and subtitle styling */
+.privacy-policy-title {
+  font-size: 1.8rem;
+  font-family: "Days One", sans-serif;
+  color: #4d194d;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.privacy-policy-subtitle {
+  font-size: 1.4rem;
+  font-family: "Days One", sans-serif;
+
+  color: #52377b;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Text and paragraph styling */
+.privacy-policy-text {
+  font-family: "Alata", sans-serif;
+
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.privacy-policy-note {
+  font-family: "Alata", sans-serif;
+
+  font-size: 0.95rem;
+  color: #4d194d;
+  margin-top: 10px;
+}
+
+/* Strong element styling */
+.privacy-policy-strong {
+  font-weight: bold;
+  color: #52377b;
+}
+
+/* List styling */
+.privacy-policy-list {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.privacy-policy-list-item {
+  font-size: 1rem;
+  font-family: "Alata", sans-serif;
+
+  margin-bottom: 5px;
+}
+
+/* Link styling */
+.privacy-policy-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.privacy-policy-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .privacy-policy-container {
+    padding: 15px;
+  }
+
+  .privacy-policy-title {
+    font-size: 1.6rem;
+  }
+
+  .privacy-policy-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .privacy-policy-text,
+  .privacy-policy-list-item {
+    font-size: 0.9rem;
+  }
+}
