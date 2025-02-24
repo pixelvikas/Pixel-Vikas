@@ -2,14 +2,16 @@
     {
         "id": "rajkosh",
         "project_name": "Rajkosh",
-        "project_details": "Website | Domain | Server",
+        "project_details": "UX/UI | Website | Domain | Server | SEO | Social Media",
         "image": "/assets/Project/Rajkosh/rajkosh1.png",
         "link": "/projects/rajkosh",
         "alt_text": "Project 1",
         "services": [
             "UX/UI",
             "Social Media",
-            "Server"
+            "Server",
+            "Graphics",
+            "SEO"
         ],
         "challenge": {
             "image": "/assets/Project/Rajkosh/challenge.png",
